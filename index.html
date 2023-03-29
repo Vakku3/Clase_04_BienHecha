@@ -23,7 +23,11 @@
             var lasHoras = new Date().getHours();
             var losMinutos = new Date().getMinutes();
             var losSegundos = new Date().getSeconds();
-
+//Prueba 01
+         if (lasHoras <10) {lasHora = "0" + lasHora;}
+         if (losMinutos < 10) {losMinutos = "0" + losMinutos;}
+         if (losSegundos < 10) {losSegundos = "0" + losSegundos;}
+ 
             function preload() { datos = loadJSON("https://digimon-api.vercel.app/api/digimon"); }
             function setup() {
                 datosArreglados = Object.values(datos);
